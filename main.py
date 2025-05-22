@@ -3,3 +3,7 @@ import pandas as pd
 def load_data(path):
     df = pd.read_csv(path)
     return df
+
+def clean_data(df):
+    df.columns = [col.lower() for col in df.columns]
+    return df
